@@ -1,3 +1,3 @@
 ---
-hi: "true"
+hidden: "true"
 ---

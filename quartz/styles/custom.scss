@@ -1,9 +1,8 @@
 @use "./base.scss";
 
-// put your custom CSS here!
-/* 사이드바(탐색기)에서 특정 페이지 숨기기 */
-.sidebar a[href*="_nav"],
-.sidebar a[href*="_draft"],
-.sidebar a[href*="_hidden"] {
+/* 사이드바에서 특정 항목 숨기기 */
+.left.sidebar a[href*="_nav"],
+.left.sidebar a[href*="_draft"],
+.left.sidebar a[href*="_hidden"] {
     display: none !important;
 }
