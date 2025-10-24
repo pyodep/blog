@@ -14,3 +14,11 @@
 .left.sidebar a[href$="수학"] {
     display: none !important;
 }
+
+time,
+.date,
+.post-date,
+.page-date,
+article header time {
+    display: none !important;
+}
