@@ -6,3 +6,11 @@
 .left.sidebar a[href*="_hidden"] {
     display: none !important;
 }
+.left.sidebar details:has(> ul:empty)>summary {
+    display: none !important;
+}
+.left.sidebar a[href$="알고리즘"],
+.left.sidebar a[href$="AI"],
+.left.sidebar a[href$="수학"] {
+    display: none !important;
+}
