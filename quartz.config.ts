@@ -23,9 +23,9 @@ const config: QuartzConfig = {
       fontOrigin: "googleFonts",
       cdnCaching: true,
       typography: {
-        header: "Schibsted Grotesk",
-        body: "Source Sans Pro",
-        code: "IBM Plex Mono",
+        header: "Fira Sans",
+        body: "Roboto",
+        code: "Fira Code",
       },
       colors: {
         lightMode: {
@@ -40,9 +40,9 @@ const config: QuartzConfig = {
           textHighlight: "#fff23688",
         },
         darkMode: {
-          light: "#161618",
-          lightgray: "#393639",
-          gray: "#646464",
+          light: "#080809ff",
+          lightgray: "#2c2c2cff",
+          gray: "#515151ff",
           darkgray: "#d4d4d4",
           dark: "#ebebec",
           secondary: "#14527cff",
