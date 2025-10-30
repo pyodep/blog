@@ -1,6 +1,30 @@
 @use "./base.scss";
 
 // put your custom CSS here!
+
+// title font size
 .page-title {
-    font-size: 2rem !important;
+    font-size: 1.6rem !important;
+}
+// text colors for homepage
+body[data-slug="index"] {
+    --light: "#161618",
+    --lightgray: "#393639",
+    --gray: "#646464",
+    --darkgray: "#d4d4d4",
+    --dark: "#ebebec",
+    --secondary: "#7b97aa",
+    --tertiary: "#84a59d",
+    --highlight: "rgba(143, 159, 169, 0.15)",
+    --textHighlight: "#b3aa0288",
+}
+
+body[data-slug^="Left_Brain"][data-theme="dark"]
+{
+    --secondary: #7aa2ff;
+    --tertiary: #a8c1ff;
+}
+body[data-slug^="Left_Brain"][data-theme="dark"] {
+    --secondary: #7aa2ff;
+    --tertiary: #a8c1ff;
 }
