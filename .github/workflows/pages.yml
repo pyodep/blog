@@ -21,15 +21,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node 22 (required by Quartz)
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 22
+
+      - name: Ensure npm >= 10.9.2
+        run: npm i -g npm@^10.9.2
+
+      # (선택) npm 캐시로 다음 빌드 가속
+      - name: Cache npm
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-22-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-22-
 
       - name: Install deps (clean)
-        run: |
-          rm -rf node_modules package-lock.json
-          npm install
+        run: npm ci || npm install
 
       - name: Build Quartz
         run: npx quartz build
